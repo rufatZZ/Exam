@@ -13,40 +13,41 @@
 			<h1>Caps Academy of Manis`es</h1>
 		</div>
 		<div id="photo">
-			<div id="text"></div>
+			<img src="voyage.jpg" class="photoHolder">
+			<div id="text" class="textHolder"></div>
 		</div>
 	</div>	
 	<div class="body">
 		<div class="row" id="capstext">
-			<form>
-			<input class="free" type="text" placeholder="  Text for your caps"><br>
-			<button id="tik" onclick="text()">Change Text</button>
-			</form>
+		
+			<input class="free textInput"  type="text" placeholder="  Text for your caps"><br>
+			<button class="tik" onclick="text()">Change Text</button>
+			
 		</div>
 
 		<div class="row" id="capsphoto">
-			<form>
-			<input  class="free" type="url"  placeholder="  Photo for your caps"><br>
-			<button id="tik" onclick="photo()">Change Photo</button>
-			</form>
+
+			<input  class="free photoInput" type="url"  placeholder="  Photo for your caps"><br>
+			<button class="tik" onclick="photo()">Change Photo</button>
+			
 		</div>
 	</div>
 
 		<div class="row foot">
-			<div class="col-md-3" id="bt">
-				<button id="bt" onclick="border()">Change Border</button>
+			<div class="col-md-3" id="bta">
+				<button class="bt border" onclick="border()">Change Border</button>
 			</div>
 
-			<div class="col-md-3" id="bt">
-				<button id="bt" onclick="background()">Change BGC</button>
+			<div class="col-md-3" id="btb">
+				<button class="bt bc" onclick="background()">Change BGC</button>
 			</div>
 
-			<div class="col-md-3" id="bt">
-				<button id="bt" onclick="bold()">Change Bold</button>
+			<div class="col-md-3" id="btc">
+				<button class="bt bold" onclick="bold()">Change Bold</button>
 			</div>
 
-			<div class="col-md-3" id="bt">
-				<button id="bt" onclick="position()">Change Position</button>
+			<div class="col-md-3" id="btd">
+				<button class="bt pos" onclick="position()">Change Position</button>
 			</div>
 			</div>
 	</div>
@@ -55,33 +56,68 @@
 
 <script>
 	function text(){
-	
+
+		var text = document.getElementsByClassName("textInput")[0].value;
+		document.getElementsByClassName("textHolder")[0].innerHTML=text;
 
 	}
+
 	function photo(){
-	
+
+		var photo = document.getElementsByClassName("photoInput")[0].value;
+		document.getElementsByClassName("photoHolder")[0].src= photo;
 
 	}
 
+// Magic effects
+
+
+	var a=true;
 	function border(){
-	
-
-	}
+		
+		if(a){
+			document.getElementById("text").style.border = "3px solid yellow";
+			a=false; 
+		}else{
+			document.getElementById("text").style.border = "none";
+			a=true;
+		}
+		
+	}		
+		
 
 	function background(){
-
-		
+		if(a){
+			document.getElementById("text").style.backgroundColor = "blue";
+			a=false; 
+		}else{
+			document.getElementById("text").style.backgroundColor = "red";
+			a=true;
+		}
 	}
 
 	function bold(){
-
-		
-	}
+		if(a){
+			document.getElementById("text").style.fontWeight = "700";
+			a=false; 
+		}else{
+			document.getElementById("text").style.fontWeight = "400";
+			a=true;
+		}
+	}	
 
 	function position(){
-
-	
+		if(a){
+			document.getElementById("text").style.top = "0px";
+			a=false; 
+		}else{
+			//document.getElementById("text").style.bootom = "0px";
+			document.getElementById("text").style.top = "350px";
+			a=true;
+		}
 	}
+
+// positionda qeyd olunan emr yerine yetirilmir. qalan butun Shertler yerine yetirilib 
 
 </script>
 

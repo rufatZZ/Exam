@@ -1,4 +1,6 @@
-
+img {
+	width: 100%;
+}
 .container {
 	position: relative;
 	width: 800px;
@@ -17,7 +19,6 @@
 	width: 800px;
 	height: 400px;
 	overflow:hidden;
-	background-image: url("voyage.jpg");
 	background-size: cover;
 }
 
@@ -41,7 +42,7 @@
 	padding: 10px;
 	border: 2px solid #3399FF;
 }
-#tik {
+.tik {
 	position: relative;
 	float: right;
 	clear: left;
@@ -53,7 +54,7 @@
 
 }
 
-#bt button{
+#bta button, #btb button, #btc button, #btd  button{
 	position: relative;
 	margin-top: 25px;
 	width: 180px;
