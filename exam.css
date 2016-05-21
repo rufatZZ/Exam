@@ -1,0 +1,72 @@
+* {
+	margin: 0 auto;
+}
+.container {
+	position: relative;
+	width: 800px;
+	background-color: #F2DDBF;
+	height: 900px;
+}
+
+.header h1{
+	font-family: cursive; 
+	color: #003366;
+	
+}
+
+#photo {
+	position: relative;
+	width: 800px;
+	height: 400px;
+	overflow:hidden;
+	background-image: url("voyage.jpg");
+	background-size: cover;
+}
+
+#text {
+	position: absolute;
+	width: 800px;
+	height: 50px;
+	background-color:#FF9966;
+	bottom: 0px;
+
+}
+
+#capstext,#capsphoto {
+	position: relative;
+	margin-top: 30px; 
+}
+
+.free {
+	position: relative;
+	width: 800px;
+	padding: 10px;
+	border: 2px solid #3399FF;
+}
+#tik {
+	position: relative;
+	float: right;
+	clear: left;
+	margin-top: 5px;
+	width: 150px;
+	padding: 5px; 
+	border:none;
+	background: #FF9966;
+
+}
+
+#bt button{
+	position: relative;
+	margin-top: 25px;
+	width: 180px;
+	padding: 5px; 
+	border:none;
+	background: #FF9966;
+
+}
+
+input {
+	color:#003366;
+	font-family:cursive;
+
+}
